@@ -1942,7 +1942,7 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 4
+  #define GRID_MAX_POINTS_X 5
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
@@ -2205,32 +2205,38 @@
 #define PREHEAT_1_LABEL       "PLA"
 #define PREHEAT_1_TEMP_HOTEND  190
 #define PREHEAT_1_TEMP_BED     60
-#define PREHEAT_1_TEMP_CHAMBER 128
-#define PREHEAT_1_FAN_SPEED    255 // Value from 0 to 255
+#define PREHEAT_1_TEMP_CHAMBER 150
+#define PREHEAT_1_FAN_SPEED    128 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "ABS"
 #define PREHEAT_2_TEMP_HOTEND  225
 #define PREHEAT_2_TEMP_BED     110
-#define PREHEAT_2_TEMP_CHAMBER 0
-#define PREHEAT_2_FAN_SPEED    255 // Value from 0 to 255
+#define PREHEAT_2_TEMP_CHAMBER 150
+#define PREHEAT_2_FAN_SPEED    0 // Value from 0 to 255
 
 #define PREHEAT_3_LABEL       "PETG"
 #define PREHEAT_3_TEMP_HOTEND  200
 #define PREHEAT_3_TEMP_BED     90
-#define PREHEAT_3_TEMP_CHAMBER 255
+#define PREHEAT_3_TEMP_CHAMBER 150
 #define PREHEAT_3_FAN_SPEED    255 // Value from 0 to 255
 
-#define PREHEAT_4_LABEL       "Nylon"
+#define PREHEAT_4_LABEL       "NYLON"
 #define PREHEAT_4_TEMP_HOTEND  240
 #define PREHEAT_4_TEMP_BED     100
-#define PREHEAT_4_TEMP_CHAMBER 0
-#define PREHEAT_4_FAN_SPEED    255 // Value from 0 to 255
+#define PREHEAT_4_TEMP_CHAMBER 200
+#define PREHEAT_4_FAN_SPEED    0 // Value from 0 to 255
 
-#define PREHEAT_5_LABEL       "Flex"
+#define PREHEAT_5_LABEL       "FLEX"
 #define PREHEAT_5_TEMP_HOTEND  200
 #define PREHEAT_5_TEMP_BED     80
-#define PREHEAT_5_TEMP_CHAMBER 255
+#define PREHEAT_5_TEMP_CHAMBER 150
 #define PREHEAT_5_FAN_SPEED    255 // Value from 0 to 255
+
+#define PREHEAT_6_LABEL       "CLEAN"
+#define PREHEAT_6_TEMP_HOTEND  250
+#define PREHEAT_6_TEMP_BED     50
+#define PREHEAT_6_TEMP_CHAMBER 150
+#define PREHEAT_6_FAN_SPEED    0 // Value from 0 to 255
 
 // @section motion
 
@@ -2324,7 +2330,7 @@
   //#define NOZZLE_CLEAN_NO_Y
 
   // Require a minimum hotend temperature for cleaning
-  #define NOZZLE_CLEAN_MIN_TEMP 170
+  #define NOZZLE_CLEAN_MIN_TEMP 250
   //#define NOZZLE_CLEAN_HEATUP       // Heat up the nozzle instead of skipping wipe
 
   // Explicit wipe G-code script applies to a G12 with no arguments.
@@ -3158,8 +3164,8 @@
 //
 // Ender-3 v2 OEM display. A DWIN display with Rotary Encoder.
 //
-#define DWIN_CREALITY_LCD             // Creality UI
-//#define DWIN_LCD_PROUI              // Pro UI by MRiscoC
+//#define DWIN_CREALITY_LCD             // Creality UI
+#define DWIN_LCD_PROUI              // Pro UI by MRiscoC
 //#define DWIN_CREALITY_LCD_JYERSUI   // Jyers UI by Jacob Myers
 //#define DWIN_MARLINUI_PORTRAIT      // MarlinUI (portrait orientation)
 //#define DWIN_MARLINUI_LANDSCAPE     // MarlinUI (landscape orientation)
